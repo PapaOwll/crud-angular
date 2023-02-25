@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
 
 @Component({
@@ -6,7 +6,7 @@ import {FormBuilder, FormGroup} from "@angular/forms";
   templateUrl: './emp-add-edit.component.html',
   styleUrls: ['./emp-add-edit.component.scss']
 })
-export class EmpAddEditComponent {
+export class EmpAddEditComponent implements OnInit{
   empForm: FormGroup
  education:string[]=[
    "Elementry",'Diploma',"Graduate","Ma","PHD",
@@ -29,4 +29,10 @@ export class EmpAddEditComponent {
      console.log(this.empForm.value)
    }
  }
+
+  ngOnInit(): void {
+   this.empForm.valueChanges.subscribe((res) => {
+     console.log(res)
+   })
+  }
 }
