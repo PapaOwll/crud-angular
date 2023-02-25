@@ -45,10 +45,23 @@ ngOnInit() {
     }
   }
 
-  openAddEditForm() {
+  openAddForm() {
     this.dialog.open(EmpAddEditComponent).afterClosed().subscribe({
-      next: ()=>{
-        this.getEmployeeList()
+      next: (val)=>{
+        if (val){
+          this.getEmployeeList()
+        }
+      }
+    })
+
+  }
+  openEditForm(data : any) {
+    this.dialog.open(EmpAddEditComponent , {data}).afterClosed().subscribe({
+      next: (val)=>{
+        if (val){
+          console.log(val)
+          this.getEmployeeList()
+        }
       }
     })
 
