@@ -20,7 +20,7 @@ export class EmpAddEditComponent {
      gender:'',
      education:'',
      company:'',
-     experiance:'',
+     exp:'',
      package:'',
    })
  }
