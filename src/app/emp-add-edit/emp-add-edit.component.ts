@@ -18,7 +18,7 @@ export class EmpAddEditComponent implements OnInit {
   constructor(private _fb: FormBuilder,
               private empService: EmployeeService,
               private dialog: MatDialogRef<EmpAddEditComponent>,
-              private coreService : CoreService,
+              private coreService: CoreService,
               @Inject(MAT_DIALOG_DATA) public data: any
   ) {
     this.empForm = this._fb.group({
@@ -37,22 +37,21 @@ export class EmpAddEditComponent implements OnInit {
   formSubmit() {
     if (this.empForm.valid) {
       if (this.data) {
-        this.empService.updateEmployee(this.empForm.value , this.data.id ).subscribe({
-          next : (val) => {
+        this.empService.updateEmployee(this.empForm.value, this.data.id).subscribe({
+          next: (val) => {
             console.log(val)
-            this.coreService.openSnackBar("Employee Data Updated" , "Done")
+            this.coreService.openSnackBar("Employee Data Updated", "Done")
             this.dialog.close(true)
 
           },
-          error :(err) => {
+          error: (err) => {
             console.log(err)
           }
         })
-      }
-      else {
+      } else {
         this.empService.addEmployee(this.empForm.value).subscribe({
           next: () => {
-            this.coreService.openSnackBar("Employee Added Successfully" , "Done")
+            this.coreService.openSnackBar("Employee Added Successfully", "Done")
             this.dialog.close(true)
 
           },

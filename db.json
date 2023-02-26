@@ -1,21 +1,45 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "firstName": "abbas ",
+      "lastName": "qaderi",
+      "email": "qaderi@mail.com",
+      "dob": "1973-07-10T20:30:00.000Z",
+      "gender": "male",
+      "education": "Ma",
+      "company": "Avang",
+      "exp": 5,
+      "package": 6000,
+      "id": 6
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "firstName": "sajad",
+      "lastName": "moradi",
+      "email": "moradi@mail.com",
+      "dob": "2023-02-02T20:30:00.000Z",
+      "gender": "male",
+      "education": "Diploma",
+      "company": "kale",
+      "exp": 2,
+      "package": 2200,
+      "id": 7
+    },
+    {
+      "firstName": "reza",
+      "lastName": "javadi",
+      "email": "javadi@mail.com",
+      "dob": "2023-02-13T20:30:00.000Z",
+      "gender": "male",
+      "education": "Diploma",
+      "company": "Yahoo",
+      "exp": 2,
+      "package": 222,
+      "id": 8
     }
   ],
+  "comments": [],
   "profile": {
     "name": "typicode",
     "lastName": "typicode"
   }
-
 }
